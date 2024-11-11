@@ -21,12 +21,38 @@
           }
      </style>
      <title>Videostreaming ESP32-CAM</title>
+
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
 </head>
 <body class = "container">
      <div class="containerHeader">
           <h1>Video Streaming</h1>
           <img src="{{ url_for('static', filename='Header.webp') }}" alt="Image header" width="50%">
      </div>
-     <img src="{{ url_for('video_stream') }}">
-</body>
+     <h1>Parte 1-A</h1>
+     <h2>Detección de movimiento y FPS</h2>
+     <img src="{{ url_for('deteccion_movimiento') }}">
+     <h2>Problemas de ilumninación</h2>
+     <!-- <img src="{{ url_for('problemas_iluminacion') }}"> -->
+     <h1>Parte 1-B</h1>
+     <h2>Sal Pimienta</h2>
+     <!-- <img src="{{ url_for('sal_pimienta') }}"> -->
+   
+     <div>
+          <label for="trackbarSal">Porcentaje de Sal:</label><br>
+          <input type="range" id="trackbarSal" name="trackbarSal" min="0" max="100" value="0">
+          <span id="valorTrackbarSal">0</span>
+          
+          <br>
+          <br>
+
+          <label for="trackbarPimienta">Porcentaje de Pimienta:</label><br>
+          <input type="range" id="trackbarPimienta" name="trackbarPimienta" min="0" max="100" value="0">
+          <span id="valorTrackbarPimienta">0</span>
+     </div>
+
+     <h2>Detección bordes</h2>
+     <!-- <img src="{{ url_for('deteccion_bordes') }}"> -->
+     
+     <script src="../static/trackbars.js"></script>
 </html>
